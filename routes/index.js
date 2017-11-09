@@ -10,7 +10,7 @@ router.use(bodyParser.json()); // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencode
 
 // GET with URI /read/CS3520
-router.get('http://csweb01.csueastbay.edu/~rd7359/getMyNodeResults.php', function(req, res, next) {
+router.get('http://csweb01.csueastbay.edu/~rd7359/PHPandNode/getMyNodeResults.php', function(req, res, next) {
     //expecting data variable called name --retrieve value using body-parser
     var body = JSON.stringify(req.body);  //if wanted entire body as JSON
     var params = JSON.stringify(req.params);//if wanted parameters
