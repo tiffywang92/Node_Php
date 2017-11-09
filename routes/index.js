@@ -15,7 +15,7 @@ router.get('http://csweb01.csueastbay.edu/~rd7359/getMyNodeResults.php', functio
     var body = JSON.stringify(req.body);  //if wanted entire body as JSON
     var params = JSON.stringify(req.params);//if wanted parameters
     var value_name = req.params.name;  //retrieve the data associated with name
-    res.send("hello " + value_name);
+    //res.send("hello " + value_name);
 })
 
 // process post
