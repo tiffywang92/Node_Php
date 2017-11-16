@@ -9,7 +9,12 @@ var querystring = require('querystring'); // for use in GET Query string of form
 router.use(bodyParser.json()); // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencode
 
-// process post
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'CS3250' });
+});
+
+// process post to read post data called name
 router.post('/readNameAndRespond', function(req, res, next) {
     //expecting data variable called name --retrieve value using body-parser
     var body = JSON.stringify(req.body);  //if wanted entire body as JSON
